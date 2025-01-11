@@ -21,7 +21,7 @@ let fn = (evt) => {
     const diffInMs = today - selectedDate;
     const diffInDays = diffInMs / (1000 * 60 * 60 * 24);
     const weeks = Math.floor(diffInDays / 7);
-    for(let i = 0; i < weeks; i++){
+    for(let i = 0; i < weeks && i < 3390; i++){
         bx.children[i].classList.add("spent");
     }
 }
