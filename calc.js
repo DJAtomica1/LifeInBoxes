@@ -24,6 +24,8 @@ let fn = (evt) => {
     for(let i = 0; i < weeks && i < 3390; i++){
         bx.children[i].classList.add("spent");
     }
+    document.querySelector("#left").innerHTML = `${Math.max(Math.min(3390, 3390 - weeks), 0)}`;
+    document.querySelector("#spentweeks").innerHTML = `${Math.min(3390, Math.max(0, weeks))}`;
 }
 fn();
 document.querySelector("#inp").addEventListener("change", fn);
